@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="166" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="vkClient" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="545" height="166"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="545" height="166"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DMB-gi-TCa">
+                        <rect key="frame" x="30" y="23" width="120" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="120" id="HU4-eJ-93R"/>
+                            <constraint firstAttribute="width" secondItem="DMB-gi-TCa" secondAttribute="height" multiplier="1:1" id="MA6-pm-3kq"/>
+                            <constraint firstAttribute="width" constant="120" id="yGF-zA-4Th"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzh-fl-pLd">
+                        <rect key="frame" x="160" y="83" width="365" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdE-cn-BHw">
+                        <rect key="frame" x="160" y="91" width="365" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMK-N0-BhB">
+                        <rect key="frame" x="30" y="23" width="120" height="120"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain"/>
+                        <connections>
+                            <action selector="pressFotoImageView:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="llO-lb-jC7"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="jzh-fl-pLd" secondAttribute="trailing" constant="20" id="6j8-8s-2lW"/>
+                    <constraint firstItem="ZdE-cn-BHw" firstAttribute="leading" secondItem="jzh-fl-pLd" secondAttribute="leading" id="7Z4-BL-Rer"/>
+                    <constraint firstAttribute="centerY" secondItem="jzh-fl-pLd" secondAttribute="bottom" id="D8C-tT-jM4"/>
+                    <constraint firstItem="sMK-N0-BhB" firstAttribute="top" secondItem="DMB-gi-TCa" secondAttribute="top" id="Exw-5U-OfX"/>
+                    <constraint firstAttribute="bottom" secondItem="DMB-gi-TCa" secondAttribute="bottom" constant="23" id="F94-30-fwD"/>
+                    <constraint firstItem="ZdE-cn-BHw" firstAttribute="top" secondItem="jzh-fl-pLd" secondAttribute="bottom" constant="8" symbolic="YES" id="JcJ-wH-E6m"/>
+                    <constraint firstItem="sMK-N0-BhB" firstAttribute="leading" secondItem="DMB-gi-TCa" secondAttribute="leading" id="LOC-we-mXF"/>
+                    <constraint firstItem="ZdE-cn-BHw" firstAttribute="trailing" secondItem="jzh-fl-pLd" secondAttribute="trailing" id="WIK-l5-ATn"/>
+                    <constraint firstItem="jzh-fl-pLd" firstAttribute="leading" secondItem="DMB-gi-TCa" secondAttribute="trailing" constant="10" id="Zzh-Yx-Q7m"/>
+                    <constraint firstItem="DMB-gi-TCa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="g3W-c3-oaF"/>
+                    <constraint firstItem="DMB-gi-TCa" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hRB-S1-CiM"/>
+                    <constraint firstItem="sMK-N0-BhB" firstAttribute="trailing" secondItem="DMB-gi-TCa" secondAttribute="trailing" id="iDP-tj-quO"/>
+                    <constraint firstItem="sMK-N0-BhB" firstAttribute="bottom" secondItem="DMB-gi-TCa" secondAttribute="bottom" id="zQ8-Nr-puz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="ZdE-cn-BHw" id="1Or-kF-BT3"/>
+                <outlet property="fotoImageView" destination="DMB-gi-TCa" id="qDg-DZ-jiN"/>
+                <outlet property="nameLabel" destination="jzh-fl-pLd" id="dIB-07-ciB"/>
+            </connections>
+            <point key="canvasLocation" x="103.62318840579711" y="159.375"/>
+        </tableViewCell>
+    </objects>
+</document>

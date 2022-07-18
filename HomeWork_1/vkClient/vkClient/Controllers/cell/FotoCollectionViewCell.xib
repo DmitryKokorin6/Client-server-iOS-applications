@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FotoCollectionViewCell" customModule="vkClient" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="285" height="242"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="285" height="242"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ahn-rZ-0LE">
+                        <rect key="frame" x="67.5" y="57" width="150" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Ahn-rZ-0LE" secondAttribute="height" multiplier="1:1" id="0GM-ob-REI"/>
+                            <constraint firstAttribute="height" constant="150" id="EE8-UN-sYD"/>
+                            <constraint firstAttribute="width" constant="150" id="Og8-1Z-itL"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6Z-Jd-ENO" customClass="LikeControlView" customModule="vkClient" customModuleProvider="target">
+                        <rect key="frame" x="-10" y="217" width="305" height="5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="u6Z-Jd-ENO" firstAttribute="top" secondItem="Ahn-rZ-0LE" secondAttribute="bottom" constant="10" id="3J4-m6-gky"/>
+                <constraint firstItem="Ahn-rZ-0LE" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="PpQ-SF-P0I"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="u6Z-Jd-ENO" secondAttribute="bottom" constant="20" id="XLv-8b-Qjc"/>
+                <constraint firstItem="u6Z-Jd-ENO" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="-10" id="cjl-bi-IIe"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="u6Z-Jd-ENO" secondAttribute="trailing" constant="-10" id="iHi-2t-sZX"/>
+                <constraint firstItem="Ahn-rZ-0LE" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="13" id="vVA-cU-TpP"/>
+            </constraints>
+            <size key="customSize" width="285" height="242"/>
+            <connections>
+                <outlet property="fotoImageView" destination="Ahn-rZ-0LE" id="Glx-Qt-3ln"/>
+                <outlet property="likeControlVIew" destination="u6Z-Jd-ENO" id="Pbj-TC-HmI"/>
+            </connections>
+            <point key="canvasLocation" x="-112.31884057971016" y="77.678571428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
