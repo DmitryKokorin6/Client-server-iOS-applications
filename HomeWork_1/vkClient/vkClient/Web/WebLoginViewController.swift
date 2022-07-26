@@ -90,7 +90,96 @@ class WebLoginViewController: UIViewController {
           
           print(token)
           print(params["user_id"])
-
+          
+          
+          // 6. Получение списка друзей
+          
+          var urlComponents = URLComponents(string: "https://api.vk.com/method/friends.get")
+          urlComponents?.queryItems = [
+            URLQueryItem(name: "user_id", value: Session.info.userId),
+              URLQueryItem(name: "fields", value: "nickname"),
+              URLQueryItem(name: "count", value: "300"),
+              URLQueryItem(name: "order", value: "hints"),
+            URLQueryItem(name: "access_token", value: Session.info.token),
+              URLQueryItem(name: "v", value: "5.81"),
+          ]
+          guard let url = urlComponents?.url else { return }
+          
+          URLSession.shared.dataTask(with: url) { data, response, error in
+              
+              print("response --> \(response)")
+              print("error --> \(error)")
+              guard let data = data else { return }
+              
+              print("Body --> \(String(data: data, encoding: .utf8))")
+          }.resume()
+          
+          
+              // 7. Получение фотографий человека;
+          
+          var urlComponentsPhotoGet = URLComponents(string: "https://api.vk.com/method/photos.get")
+              urlComponentsPhotoGet?.queryItems = [
+                  URLQueryItem(name: "album_id", value: "profile"),
+                  URLQueryItem(name: "v", value: "5.81"),
+                  URLQueryItem(name: "access_token", value: Session.info.token)
+              ]
+              guard let url = urlComponentsPhotoGet?.url else { return }
+              
+              URLSession.shared.dataTask(with: url) { data, response, error in
+                  print("response --> \(response)")
+                  print("error --> \(error)")
+                  
+                  guard let data = data else { return }
+                  print("Body -->\(String(data: data, encoding: .utf8))")
+              }.resume()
+          
+          // 8. Получение групп текущего пользователя
+          
+          var urlComponentsGroupsGet = URLComponents(string: "https://api.vk.com/method/groups.get")
+          urlComponentsGroupsGet?.queryItems = [
+            URLQueryItem(name: "user_id", value: Session.info.userId),
+            URLQueryItem(name: "extended", value: "1"),
+            URLQueryItem(name: "access_token", value: Session.info.token),
+            URLQueryItem(name: "v", value: "5.81")
+          ]
+          
+          guard let url = urlComponentsGroupsGet?.url else { return }
+          
+          URLSession.shared.dataTask(with: url) { data, response, error in
+              
+              print("Error --> \(error)")
+              print("Response --> \(response)")
+              
+              guard let data = data else { return }
+              
+              print("Body --> \(String(data: data, encoding: .utf8))")
+          }.resume()
+          
+          
+          
+          
+          
+          // 9. Получение групп по поисковому запросу
+          
+          var urlComponentsGroupsSearch = URLComponents(string: "https://api.vk.com/method/groups.search")
+          
+          urlComponentsGroupsSearch?.queryItems = [
+            URLQueryItem(name: "q", value: "GeekBrains"),
+            URLQueryItem(name: "count", value: "1000"),
+            URLQueryItem(name: "v", value: "5.81"),
+            URLQueryItem(name: "access_token", value: Session.info.token)
+          ]
+          guard let url = urlComponentsGroupsSearch?.url else { return }
+          
+          URLSession.shared.dataTask(with: url) { data, response, error in
+              print("Error --> \(error)")
+              print("Response --> \(response)")
+              
+              guard let data = data else { return }
+              
+              print("Body --> \(String(data: data, encoding: .utf8))")
+          }.resume()
+          
           decisionHandler(.cancel)
       }
       
