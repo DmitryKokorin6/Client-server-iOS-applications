@@ -12,6 +12,7 @@
 		5D950A62287C843D00BE25DE /* FotoGallery.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D950A61287C843D00BE25DE /* FotoGallery.xib */; };
 		5D950A64287C854200BE25DE /* FotoGallaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D950A63287C854200BE25DE /* FotoGallaryController.swift */; };
 		5D950A69287C908900BE25DE /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D950A68287C908900BE25DE /* CustomNavigationController.swift */; };
+		5D9DDB8E288FD05B000E9885 /* WebLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9DDB8D288FD05B000E9885 /* WebLoginViewController.swift */; };
 		5DA041C8284FBC35008E3E69 /* FotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA041C6284FBC35008E3E69 /* FotoCollectionViewCell.swift */; };
 		5DA041C9284FBC35008E3E69 /* FotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA041C7284FBC35008E3E69 /* FotoCollectionViewCell.xib */; };
 		5DA041CF284FBDEA008E3E69 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA041CE284FBDEA008E3E69 /* GalleryViewController.swift */; };
@@ -39,6 +40,7 @@
 		5D950A61287C843D00BE25DE /* FotoGallery.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FotoGallery.xib; sourceTree = "<group>"; };
 		5D950A63287C854200BE25DE /* FotoGallaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoGallaryController.swift; sourceTree = "<group>"; };
 		5D950A68287C908900BE25DE /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		5D9DDB8D288FD05B000E9885 /* WebLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebLoginViewController.swift; sourceTree = "<group>"; };
 		5DA041C6284FBC35008E3E69 /* FotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		5DA041C7284FBC35008E3E69 /* FotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		5DA041CE284FBDEA008E3E69 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D9DDB8F288FD802000E9885 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				5D9DDB8D288FD05B000E9885 /* WebLoginViewController.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
 		5DCE3667286E155C00C930B0 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +165,8 @@
 		8FCC56D3283D46E500756C25 /* vkClient */ = {
 			isa = PBXGroup;
 			children = (
+				5DDE224B2885255B007EF339 /* Singleton */,
+				5D9DDB8F288FD802000E9885 /* Web */,
 				5DE40082284CFC5700A90D81 /* system */,
 				5DE40083284CFC6700A90D81 /* Struct */,
 				5DE40081284CFC4600A90D81 /* Controllers */,
@@ -164,7 +176,6 @@
 				8FCC56DF283D46E900756C25 /* LaunchScreen.storyboard */,
 				8FCC56E2283D46E900756C25 /* Info.plist */,
 				5D93617E2876D3C8009532B5 /* Storage.swift */,
-				5DDE224B2885255B007EF339 /* Singleton */,
 			);
 			path = vkClient;
 			sourceTree = "<group>";
@@ -247,6 +258,7 @@
 				8FCC56D9283D46E600756C25 /* LoginViewController.swift in Sources */,
 				5DDE224A2881B47F007EF339 /* Session.swift in Sources */,
 				5DCE3666286E155700C930B0 /* LikeControlView.swift in Sources */,
+				5D9DDB8E288FD05B000E9885 /* WebLoginViewController.swift in Sources */,
 				5DA041D3284FD095008E3E69 /* Groups.swift in Sources */,
 				8FB46035284548AF00AF1CCA /* MyFriendsController.swift in Sources */,
 				5DE40087284D01BC00A90D81 /* CustomTableViewCell.swift in Sources */,
