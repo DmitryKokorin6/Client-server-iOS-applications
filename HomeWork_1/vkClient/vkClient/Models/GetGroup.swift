@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct GetGroupResponse: Decodable {
+    var response: GetGroupCountItems
+}
+
+struct GetGroupCountItems: Decodable {
+    var count: Int
+    var items: [GetGroupItems]
+}
+struct GetGroupItems: Decodable {
+    var name: String
+}

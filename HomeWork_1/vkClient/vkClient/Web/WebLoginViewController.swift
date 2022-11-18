@@ -12,6 +12,7 @@ import WebKit
 
 class WebLoginViewController: UIViewController {
     
+    let jsonDecoder = JSONDecoder()
     
     @IBOutlet weak var webView: WKWebView!
     
@@ -107,11 +108,16 @@ class WebLoginViewController: UIViewController {
           
           URLSession.shared.dataTask(with: url) { data, response, error in
               
-              print("response --> \(response)")
-              print("error --> \(error)")
+//              print("response --> \(response)")
+//              print("error --> \(error)")
               guard let data = data else { return }
-              
-              print("Body --> \(String(data: data, encoding: .utf8))")
+              do {
+                  let result = try self.jsonDecoder.decode(GetFriendsResponse.self, from: data)
+                  print(result)
+              } catch {
+                  print(error)
+              }
+//              print("Body --> \(String(data: data, encoding: .utf8))")
           }.resume()
           
           
@@ -126,11 +132,17 @@ class WebLoginViewController: UIViewController {
               guard let url = urlComponentsPhotoGet?.url else { return }
               
               URLSession.shared.dataTask(with: url) { data, response, error in
-                  print("response --> \(response)")
-                  print("error --> \(error)")
-                  
+//                  print("response --> \(response)")
+//                  print("error --> \(error)")
+//
                   guard let data = data else { return }
-                  print("Body -->\(String(data: data, encoding: .utf8))")
+                  do {
+                      let result = try self.jsonDecoder.decode(GetPhotosResponse.self, from: data)
+                      print(result)
+                  } catch {
+                      print(error)
+                  }
+//                  print("Body -->\(String(data: data, encoding: .utf8))")
               }.resume()
           
           // 8. Получение групп текущего пользователя
@@ -147,18 +159,20 @@ class WebLoginViewController: UIViewController {
           
           URLSession.shared.dataTask(with: url) { data, response, error in
               
-              print("Error --> \(error)")
-              print("Response --> \(response)")
+//              print("Error --> \(error)")
+//              print("Response --> \(response)")
               
               guard let data = data else { return }
               
-              print("Body --> \(String(data: data, encoding: .utf8))")
+              do {
+                  let result = try self.jsonDecoder.decode(GetGroupResponse.self, from: data)
+                  print(result)
+              } catch {
+                  print(error)
+              }
+//              print("Body --> \(String(data: data, encoding: .utf8))")
           }.resume()
-          
-          
-          
-          
-          
+
           // 9. Получение групп по поисковому запросу
           
           var urlComponentsGroupsSearch = URLComponents(string: "https://api.vk.com/method/groups.search")
@@ -172,12 +186,17 @@ class WebLoginViewController: UIViewController {
           guard let url = urlComponentsGroupsSearch?.url else { return }
           
           URLSession.shared.dataTask(with: url) { data, response, error in
-              print("Error --> \(error)")
-              print("Response --> \(response)")
+//              print("Error --> \(error)")
+//              print("Response --> \(response)")
               
               guard let data = data else { return }
-              
-              print("Body --> \(String(data: data, encoding: .utf8))")
+              do {
+                  let result = try self.jsonDecoder.decode(GetGroupSearchResponse.self, from: data)
+                  print(result)
+              } catch {
+                  print(error)
+              }
+//              print("Body --> \(String(data: data, encoding: .utf8))")
           }.resume()
           
           decisionHandler(.cancel)
