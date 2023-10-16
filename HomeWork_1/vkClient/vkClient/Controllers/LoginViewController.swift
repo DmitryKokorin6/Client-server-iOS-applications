@@ -167,7 +167,35 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         
-        loginButtonSpring()
+//        loginButtonSpring()
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.loginButton.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            self.loginButton.setTitle("", for: .normal)
+        }) { _ in
+            // Вычисляем конечный размер кружка загрузки
+            let finalSize = self.loginButton.frame.size.height
+            
+            // Показываем кружок загрузки
+            let activityIndicator = UIActivityIndicatorView()
+            activityIndicator.center = self.loginButton.center
+            activityIndicator.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            self.view.addSubview(activityIndicator)
+            activityIndicator.startAnimating()
+            
+            // Анимация увеличения кружка загрузки до размера кнопки
+            UIView.animate(withDuration: 0.3) {
+                activityIndicator.transform = CGAffineTransform(scaleX: finalSize / activityIndicator.frame.size.width, y: finalSize / activityIndicator.frame.size.height)
+            } completion: { _ in
+                // По окончании анимации переходите на следующий экран
+//                if self.userData() {
+//                    self.performSegue(withIdentifier: "goToMain", sender: nil)
+//                } else {
+//                    self.allertNotify()
+//                }
+            }
+        }
+        
         animateTitleImageView()
         Storage.shared.friends = fillDate()
         

@@ -26,7 +26,6 @@
 		5DBABE522928054C00051C45 /* Extencion WebLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBABE512928054C00051C45 /* Extencion WebLoginViewController.swift */; };
 		5DBABE5429280C3300051C45 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBABE5329280C3300051C45 /* Request.swift */; };
 		5DBABE562928126B00051C45 /* ResponseForAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBABE552928126B00051C45 /* ResponseForAll.swift */; };
-		5DBABE58292816E100051C45 /* AllRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBABE57292816E100051C45 /* AllRequests.swift */; };
 		5DCE3666286E155700C930B0 /* LikeControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE3665286E155700C930B0 /* LikeControlView.swift */; };
 		5DCE3669286E158800C930B0 /* LikeControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DCE3668286E158800C930B0 /* LikeControlView.xib */; };
 		5DDE224A2881B47F007EF339 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDE22492881B47F007EF339 /* Session.swift */; };
@@ -62,7 +61,6 @@
 		5DBABE512928054C00051C45 /* Extencion WebLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extencion WebLoginViewController.swift"; sourceTree = "<group>"; };
 		5DBABE5329280C3300051C45 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		5DBABE552928126B00051C45 /* ResponseForAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseForAll.swift; sourceTree = "<group>"; };
-		5DBABE57292816E100051C45 /* AllRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRequests.swift; sourceTree = "<group>"; };
 		5DCE3665286E155700C930B0 /* LikeControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControlView.swift; sourceTree = "<group>"; };
 		5DCE3668286E158800C930B0 /* LikeControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikeControlView.xib; sourceTree = "<group>"; };
 		5DDE22492881B47F007EF339 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 			children = (
 				5D9DDB8D288FD05B000E9885 /* WebLoginViewController.swift */,
 				5DBABE512928054C00051C45 /* Extencion WebLoginViewController.swift */,
-				5DBABE57292816E100051C45 /* AllRequests.swift */,
 			);
 			path = Web;
 			sourceTree = "<group>";
@@ -306,7 +303,6 @@
 				8FCC56D5283D46E500756C25 /* AppDelegate.swift in Sources */,
 				5DBABE4E2927B2E600051C45 /* GetGroupSearch.swift in Sources */,
 				5D950A64287C854200BE25DE /* FotoGallaryController.swift in Sources */,
-				5DBABE58292816E100051C45 /* AllRequests.swift in Sources */,
 				5DA041CF284FBDEA008E3E69 /* GalleryViewController.swift in Sources */,
 				5D950A69287C908900BE25DE /* CustomNavigationController.swift in Sources */,
 				5D950A60287C842600BE25DE /* FotoGallery.swift in Sources */,
